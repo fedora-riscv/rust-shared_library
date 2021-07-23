@@ -9,7 +9,7 @@
 
 Name:           rust-%{crate}
 Version:        0.1.9
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Easily bind to and load shared libraries
 
 # Upstream license specification: Apache-2.0/MIT
@@ -73,6 +73,9 @@ which use "default" feature of "%{crate}" crate.
 %endif
 
 %changelog
+* Fri Jul 23 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.9-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.9-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
