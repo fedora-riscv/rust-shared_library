@@ -6,7 +6,7 @@
 
 Name:           rust-shared_library
 Version:        0.1.9
-Release:        %autorelease
+Release:        %autorelease -e rv64
 Summary:        Easily bind to and load shared libraries
 
 # Upstream license specification: Apache-2.0/MIT
@@ -62,7 +62,7 @@ use the "default" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
-%ifarch aarch64 ppc64le
+%ifarch aarch64 ppc64le riscv64
 # * skip tests that fail on aarch64 and ppc64le:
 #   https://github.com/tomaka/shared_library/issues/17
 %cargo_test -- -- --skip test_loading_cosine
