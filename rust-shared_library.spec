@@ -62,8 +62,8 @@ use the "default" feature of the "%{crate}" crate.
 
 %if %{with check}
 %check
-%ifarch aarch64 ppc64le
-# * skip tests that fail on aarch64 and ppc64le:
+%ifarch aarch64 ppc64le riscv64
+# * skip tests that fail on aarch64, ppc64le and riscv64:
 #   https://github.com/tomaka/shared_library/issues/17
 %cargo_test -- -- --skip test_loading_cosine
 %else
